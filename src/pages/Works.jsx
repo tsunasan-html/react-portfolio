@@ -62,7 +62,7 @@ function Works() {
       <div className="l-content content">
         <div className="l-content_inner content_inner">
           <section className="content__works">
-            <h1 className={`content__title ${isTitleVisible ? 'visible' : ''}`}>PORTFOLIO</h1>
+            <h1 className={`content__title ${isTitleVisible ? 'visible' : ''}`}>WORKS</h1>
             <ul className="works_list">
               <li className="works_listItem">
                 <Link to="https://price-tools.vercel.app/" target="_blank" className="">

@@ -37,7 +37,8 @@ const HeaderSp = () => {
             <ul>
               <li><Link to="/" onClick={handleLinkClick}>HOME</Link></li>
               <li><Link to="/about/" onClick={handleLinkClick}>ABOUT</Link></li>
-              <li><Link to="/portfolio/" onClick={handleLinkClick}>PORTFOLIO</Link></li>
+              <li><Link to="/work/" onClick={handleLinkClick}>WORK</Link></li>
+              <li><Link to="https://notion-blog-nu-dun.vercel.app/" onClick={handleLinkClick}>BLOG</Link></li>
               <li><Link to="/contact/" onClick={handleLinkClick}>CONTACT</Link></li>
             </ul>
           </div>

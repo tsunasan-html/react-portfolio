@@ -21,7 +21,7 @@ function AppContent() {
   }, [location.pathname]);
 
   const isAboutPage = location.pathname === "/about/";
-  const isWorksPage = location.pathname === "/portfolio/";
+  const isWorksPage = location.pathname === "/works/";
   const isContactPage = location.pathname === "/contact/";
   const isWorks01Page = location.pathname === "/works01/";
   const isWorks02Page = location.pathname === "/works02/";
@@ -32,7 +32,7 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about/" element={<About />} />
-        <Route path="/portfolio/" element={<Works />} />
+        <Route path="/works/" element={<Works />} />
         <Route path="/contact/" element={<Contact />} />
         <Route path="/works01/" element={<Works01 />} />
         <Route path="/works02/" element={<Works02 />} />

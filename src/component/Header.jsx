@@ -36,7 +36,17 @@ function Header() {
             <Link to="/about/" className={getLinkClass("/about/")}>ABOUT</Link>
           </li>
           <li className="header_inner_listItem header_inner_listItem--works">
-            <Link to="/portfolio/" className={getLinkClass("/works/")}>PORTFOLIO</Link>
+            <Link to="/works/" className={getLinkClass("/works/")}>WORKS</Link>
+          </li>
+          <li className="header_inner_listItem header_inner_listItem--external">
+            <a
+              href="https://notion-blog-nu-dun.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={getLinkClass("/")}
+            >
+              BLOG
+            </a>
           </li>
           <li className="header_inner_listItem header_inner_listItem--contact">
             <Link to="/contact/" className={getLinkClass("/contact/")}>CONTACT</Link>
