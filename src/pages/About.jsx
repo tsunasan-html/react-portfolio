@@ -37,7 +37,7 @@ function About() {
               日々学びながら開発に取り組んでいます。
               <br /><br />
 
-              学習ログや制作したPortfolioの詳細は、<a href="https://www.wantedly.com/id/tetsuhiro_muneyuki">Wantedly</a> にて発信しています。<br className="line-break" />
+              学習ログや制作したPortfolioの詳細は、<a href="https://www.wantedly.com/id/tetsuhiro_muneyuki" target="_blank">Wantedly</a> にて発信しています。<br className="line-break" />
               よろしければご覧いただけますと幸いです。
               <br /><br />
 
