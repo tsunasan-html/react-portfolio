@@ -1,0 +1,108 @@
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .works_each__name-position {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .works_each__name-position.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .works_each__profile {
+    width: 100%;
+  }
+  
+  .works_each__title {
+    font-size: 3.2vw;
+    text-align: center;
+    letter-spacing: 0.1em;
+    margin: 0 0 7.5vw;
+  }
+  
+  .works_each__name {
+    font-size: 2.7vw;
+    letter-spacing: 0.1em;
+    margin: 1vw 0 7.5vw;
+    position: relative;
+  }
+  
+  .works_each__name-position {
+    font-size: 1.1vw;
+    letter-spacing: 0.1em;
+    vertical-align: middle;
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+    line-height: 2vw;
+    border-left: 1px solid #9c9c9b;
+    color: #9c9c9b;
+    font-weight: normal;
+    padding-left: 2.5vw;
+  }
+  
+  .works_each__sentence {
+    font-size: 1.1vw;
+    font-family: 'Yu Gothic', sans-serif;
+    line-height: 2.2em;
+    text-align: justify;
+    letter-spacing: .075em;
+  }
+
+
+.works_photoListItem--full {
+    width: 100%;
+  }
+  .works_photoListItem {
+    display: block;
+    display: block;
+    padding-bottom: 3rem;
+    margin-bottom: 5rem;
+    border-bottom: 1px solid #191919;
+}
+.works_photoListItem--full img {
+    width: 100%;
+}
+
+.works_sentence {
+    font-size: 1.3vw;
+    font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    line-height: 2.2em;
+    text-align: justify;
+    letter-spacing: .075em;
+    margin-bottom: 8.8vw;
+}
+.works_sentence__a {
+  font-size: 1.6vw;
+}
+
+@media screen and (max-width: 767px) {
+.works_sentence {
+  font-size: 3.2vw;
+  line-height: 2em;
+  }
+  .content__works_each h3 {
+    font-size: 4vw;
+  }
+
+  .works_each__name {
+    font-size: 3vw;
+  }
+  
+  .works_each__name-position {
+    font-size: 2.2vw;
+    line-height: 2.5vw;
+  }
+}
