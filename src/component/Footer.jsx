@@ -2,11 +2,8 @@ import React from 'react';
 import '../assets/css/Footer.css';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faFacebookF,
-  faInstagram,
-} from '@fortawesome/free-brands-svg-icons';
-import { faWikipediaW } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faWikipediaW, faPinterestP } from '@fortawesome/free-brands-svg-icons';
+
 
 const Footer = () => {
   return (
@@ -23,14 +20,14 @@ const Footer = () => {
           <FontAwesomeIcon icon={faFacebookF} className="footer-icon" />
         </a>
 
-        {/* Instagram */}
+        {/* Pinterest */}
         <a
-          href="/"
-          aria-label="Instagram"
+          href="https://jp.pinterest.com/tetsuhiro_muneyuki/"
+          aria-label="Pinterest"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={faInstagram} className="footer-icon" />
+          <FontAwesomeIcon icon={faPinterestP} className="footer-icon" />
         </a>
 
         {/* Wantedly */}
