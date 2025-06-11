@@ -65,16 +65,16 @@ function Works() {
             <h1 className={`content__title ${isTitleVisible ? 'visible' : ''}`}>WORKS</h1>
             <ul className="works_list">
               <li className="works_listItem">
-                <Link to="https://duo-shadowing-app.vercel.app/" target="_blank" className="">
-                 <img 
-                   src={works06} 
-                   className={`works_listItem_eyecatch ${isImageVisible ? 'visible' : ''} fadein scrollin`} 
-                   alt="" 
-                 />
-                 <div className="works_listItem_textblock">
-                   <h2 className={`works_title ${isH2Visible ? 'visible' : ''}`}>Duo 3.0 Shadowing App / React</h2>
-                 </div>
-                 </Link>
+                <Link to="https://price-tools.vercel.app/" target="_blank" className="">
+                  <img 
+                    src={works01} 
+                    className={`works_listItem_eyecatch ${isImageVisible ? 'visible' : ''} fadein scrollin`} 
+                    alt="" 
+                  />
+                  <div className="works_listItem_textblock">
+                    <h2 className={`works_title ${isH2Visible ? 'visible' : ''}`}>Pricing Tools / React</h2>
+                  </div>
+                </Link>
               </li>
               <li className="works_listItem">
                 <Link to="https://vocabulary-practice-xi.vercel.app/" target="_blank" className="">
@@ -88,17 +88,18 @@ function Works() {
                   </div>
                 </Link>
               </li>
+
               <li className="works_listItem">
-                <Link to="https://price-tools.vercel.app/" target="_blank" className="">
-                  <img 
-                    src={works01} 
-                    className={`works_listItem_eyecatch ${isImageVisible ? 'visible' : ''} fadein scrollin`} 
-                    alt="" 
-                  />
-                  <div className="works_listItem_textblock">
-                    <h2 className={`works_title ${isH2Visible ? 'visible' : ''}`}>Pricing Tools / React</h2>
-                  </div>
-                </Link>
+                <Link to="https://duo-shadowing-app.vercel.app/" target="_blank" className="">
+                 <img 
+                   src={works06} 
+                   className={`works_listItem_eyecatch ${isImageVisible ? 'visible' : ''} fadein scrollin`} 
+                   alt="" 
+                 />
+                 <div className="works_listItem_textblock">
+                   <h2 className={`works_title ${isH2Visible ? 'visible' : ''}`}>Duo 3.0 Shadowing App / React</h2>
+                 </div>
+                 </Link>
               </li>
               <li className="works_listItem">
                  <Link to="https://nextjs-pokeapi.vercel.app/" target="_blank" className="">
