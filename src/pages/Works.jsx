@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import works01 from '../assets/images/works01/img01.png';
 import works02 from '../assets/images/works02/img01.png';
+import works03 from '../assets/images/works03/img01.png';
 import works04 from '../assets/images/works04/img01.png';
 import works05 from '../assets/images/works05/img01.png';
 import works06 from '../assets/images/works06/img01.png';
@@ -125,6 +126,18 @@ function Works() {
                    </div>
                  </Link>
                </li>
+                {/* <li className="works_listItem">
+                 <Link to="https://spotify-app-ji1q.vercel.app/" target="_blank" className="">
+                   <img 
+                     src={works03} 
+                     className={`works_listItem_eyecatch ${isImageVisible ? 'visible' : ''} fadein scrollin`} 
+                     alt="" 
+                   />
+                   <div className="works_listItem_textblock">
+                     <h2 className={`works_title ${isH2Visible ? 'visible' : ''}`}>Spotify API / React</h2>
+                   </div>
+                 </Link>
+               </li> */}
 
                <li className="works_listItem">
                   <Link to="/works" target="_blank" className="">
