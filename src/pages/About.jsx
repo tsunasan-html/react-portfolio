@@ -41,8 +41,7 @@ function About() {
               よろしければご覧いただけますと幸いです。
               <br /><br />
 
-              Vue.js、React、Next.js<br className="line-break" />
-              などを中心に技術力を向上中。
+              Vue.js、React、Next.jsなどを中心に技術力を向上中。
             </p>
           </section>
         </div>
