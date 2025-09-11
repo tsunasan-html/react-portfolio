@@ -33,15 +33,17 @@ function About() {
               <span className={`about__name-position animate-on-scroll ${isVisible ? 'visible' : ''}`}>WEB DEVELOPER</span>
             </h2>
             <p className={`about__sentence animate-on-scroll ${isVisible ? 'visible' : ''}`}>
-              Webエンジニアとして、フロントエンドを中心に、<br className="line-break" />
-              日々学びながら開発に取り組んでいます。
+              これまでWeb制作会社で約5年間コーディングに携わり、<br />
+              現在はWebエンジニアとしてフロントエンド開発を中心に業務を行っています。
               <br /><br />
-
+              フロントエンド開発では、主にバックエンドとのAPI連携を担当しています。<br />
+              将来的には、こうした経験にデザインスキルを掛け合わせ、幅広く対応できるエンジニアを目指しています。
+              <br /><br />
               学習ログや制作したPortfolioの詳細は、WantedlyやBlogで発信しています。<br className="line-break" />
               よろしければご覧いただけますと幸いです。
               <br /><br />
 
-              Vue.js、React、AWSなどを中心に技術力を向上中。
+              Vue2、Vue3、React、AWS を中心に技術力を高めています。
             </p>
           </section>
         </div>
