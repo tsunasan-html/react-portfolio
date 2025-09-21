@@ -60,6 +60,10 @@
   padding: 1rem;
   font-size: 14px;
 }
+.wantedlyMargin {
+  margin-top: .2rem;
+}
+
 
 @media screen and (max-width: 767px) {
     .footer {
@@ -74,5 +78,8 @@
     .footer-icon {
         width: calc(100vw / 750 * 38);
         height: calc(100vw / 750 * 38);
+    }
+    .wantedlyMargin {
+      margin-top: calc(100vw / 750 * 4);
     }
 }

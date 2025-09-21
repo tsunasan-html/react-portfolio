@@ -20,22 +20,13 @@ const Footer = () => {
           <FontAwesomeIcon icon={faFacebookF} className="footer-icon" />
         </a>
 
-        {/* Pinterest */}
-        <a
-          href="https://jp.pinterest.com/tetsuhiro_muneyuki/"
-          aria-label="Pinterest"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FontAwesomeIcon icon={faPinterestP} className="footer-icon" />
-        </a>
-
         {/* Wantedly */}
         <a
           href="https://www.wantedly.com/id/tetsuhiro_muneyuki"
           aria-label="Wantedly"
           target="_blank"
           rel="noopener noreferrer"
+          className='wantedlyMargin'
         >
           <FontAwesomeIcon icon={faWikipediaW} className="footer-icon" />
         </a>

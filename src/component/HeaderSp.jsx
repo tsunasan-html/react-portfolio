@@ -7,9 +7,11 @@ const HeaderSp = () => {
   const [skipAnimation, setSkipAnimation] = useState(false);
   const location = useLocation();
    
+  // ルートが変わったら状態リセット（追加）
   useEffect(() => {
     setSkipAnimation(false);
-  }, [location]);  
+    setIsChecked(false);
+  }, [location]);
 
   const handleToggle = () => {
     setIsChecked(!isChecked);
@@ -18,6 +20,10 @@ const HeaderSp = () => {
   const handleLinkClick = () => {
     setSkipAnimation(true);
     setIsChecked(false); 
+  };
+  const handleExternalLinkClick = () => {
+    setSkipAnimation(false);
+    setIsChecked(false);
   };
 
   return (
@@ -37,8 +43,17 @@ const HeaderSp = () => {
             <ul>
               <li><Link to="/" onClick={handleLinkClick}>HOME</Link></li>
               <li><Link to="/about/" onClick={handleLinkClick}>ABOUT</Link></li>
-              <li><Link to="/work/" onClick={handleLinkClick}>WORK</Link></li>
-              <li><Link to="https://notion-blog-nu-dun.vercel.app/" onClick={handleLinkClick}>BLOG</Link></li>
+              <li><Link to="/works/" onClick={handleLinkClick}>WORKS</Link></li>
+              <li>
+                <a
+                  href="https://notion-blog-nu-dun.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={handleExternalLinkClick}
+                >
+                  BLOG
+                </a>
+              </li>
               <li><Link to="/contact/" onClick={handleLinkClick}>CONTACT</Link></li>
             </ul>
           </div>
