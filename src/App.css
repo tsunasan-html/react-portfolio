@@ -55,7 +55,10 @@ header {
 .link-gold {
   color: #a28d69; 
 }
-
+.link-fff,
+.link-gold {
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
 ul {
   list-style: none; 
   padding: 0;

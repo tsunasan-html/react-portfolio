@@ -33,10 +33,10 @@ function Header() {
             <Link to="/" className={getLinkClass("/")}>HOME</Link>
           </li>
           <li className="header_inner_listItem header_inner_listItem--about">
-            <Link to="/about/" className={getLinkClass("/about/")}>ABOUT</Link>
+            <Link to="/about" className={getLinkClass("/about")}>ABOUT</Link>
           </li>
           <li className="header_inner_listItem header_inner_listItem--works">
-            <Link to="/works/" className={getLinkClass("/works/")}>WORKS</Link>
+            <Link to="/works" className={getLinkClass("/works")}>WORKS</Link>
           </li>
           <li className="header_inner_listItem header_inner_listItem--external">
             <a
@@ -49,7 +49,7 @@ function Header() {
             </a>
           </li>
           <li className="header_inner_listItem header_inner_listItem--contact">
-            <Link to="/contact/" className={getLinkClass("/contact/")}>CONTACT</Link>
+            <Link to="/contact" className={getLinkClass("/contact")}>CONTACT</Link>
           </li>
         </ul>
       </div>
