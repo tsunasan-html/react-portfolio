@@ -6,7 +6,7 @@ import works01 from '../assets/images/works/img01.png';
 import works02 from '../assets/images/works/img02.png';
 import works03 from '../assets/images/works/img03.png';
 import works04 from '../assets/images/works/img04.png';
-// import works05 from '../assets/images/works/img05.png';
+import works05 from '../assets/images/works/img05.png';
 import works06 from '../assets/images/works/img06.png';
 import worksComingSoon from '../assets/images/coming-soon.png';
 
@@ -137,7 +137,7 @@ function Works() {
                    </div>
                  </Link>
                </li> */}
-                {/* <li className="works_listItem">
+                <li className="works_listItem">
                  <Link to="https://notion-blog-nu-dun.vercel.app/" target="_blank" className="">
                    <img 
                      src={works05} 
@@ -148,8 +148,8 @@ function Works() {
                      <h2 className={`works_title ${isH2Visible ? 'visible' : ''}`}>Notion API Blog / Next.js</h2>
                    </div>
                  </Link>
-               </li> */}
-               <li className="works_listItem">
+               </li>
+               {/* <li className="works_listItem">
                   <Link to="/works" target="_blank" className="">
                     <img 
                       src={worksComingSoon} 
@@ -160,7 +160,7 @@ function Works() {
                       <h2 className={`works_title ${isH2Visible ? 'visible' : ''}`}>Coming Soon...</h2>
                     </div>
                   </Link>
-                </li>
+                </li> */}
             </ul>
           </section>
         </div>
