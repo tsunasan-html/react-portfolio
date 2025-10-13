@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import '../assets/css/Works.css';
+import worksData from '../data/works.json';
 import { Link } from 'react-router-dom';
 
-import works01 from '../assets/images/works/img01.png';
-import works02 from '../assets/images/works/img02.png';
-import works03 from '../assets/images/works/img03.png';
-import works04 from '../assets/images/works/img04.png';
-import works05 from '../assets/images/works/img05.png';
-import works06 from '../assets/images/works/img06.png';
-import works07 from '../assets/images/works/img07.png';
-import worksComingSoon from '../assets/images/coming-soon.png';
+const imageMap = import.meta.glob('../assets/images/works/*', {
+  eager: true,
+  as: 'url',
+});
+const extraImages = import.meta.glob('../assets/images/*', {
+  eager: true,
+  as: 'url',
+});
 
 function Works() {
   const [isTitleVisible, setIsTitleVisible] = useState(false);
@@ -17,40 +18,27 @@ function Works() {
   const [isH2Visible, setIsH2Visible] = useState(false);
 
   useEffect(() => {
-    const titleObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsTitleVisible(true);
-        }
-      },
-      { threshold: 0.5 }
-    );
+    const observerConfig = { threshold: 0.5 };
 
-    const imageObserver = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsImageVisible(true);
-        }
-      },
-      { threshold: 0.5 }
-    );
+    const titleObserver = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) setIsTitleVisible(true);
+    }, observerConfig);
 
-    const h2Observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsH2Visible(true);
-        }
-      },
-      { threshold: 0.5 }
-    );
+    const imageObserver = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) setIsImageVisible(true);
+    }, observerConfig);
+
+    const h2Observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) setIsH2Visible(true);
+    }, observerConfig);
 
     const titleElement = document.querySelector('.content__title');
     const imageElements = document.querySelectorAll('.works_listItem_eyecatch');
-    const h2Elements = document.querySelectorAll('.works_title');  
+    const h2Elements = document.querySelectorAll('.works_title');
 
     if (titleElement) titleObserver.observe(titleElement);
     imageElements.forEach((el) => imageObserver.observe(el));
-    h2Elements.forEach((el) => h2Observer.observe(el)); 
+    h2Elements.forEach((el) => h2Observer.observe(el));
 
     return () => {
       if (titleElement) titleObserver.unobserve(titleElement);
@@ -59,114 +47,57 @@ function Works() {
     };
   }, []);
 
+  // ファイル名をURLに変換
+  const resolveImage = (fileName) => {
+    const found =
+      Object.entries(imageMap).find(([path]) => path.endsWith(fileName)) ||
+      Object.entries(extraImages).find(([path]) => path.endsWith(fileName));
+    return found ? found[1] : '';
+  };
+
   return (
-    <>
-      <div className="l-content content">
-        <div className="l-content_inner content_inner">
-          <section className="content__works">
-            <h1 className={`content__title ${isTitleVisible ? 'visible' : ''}`}>WORKS</h1>
-            <ul className="works_list">
-              <li className="works_listItem">
-                 <Link to="https://spotify-app-ji1q.vercel.app/" target="_blank" className="">
-                   <img 
-                     src={works03} 
-                     className={`works_listItem_eyecatch ${isImageVisible ? 'visible' : ''} fadein scrollin`} 
-                     alt="" 
-                   />
-                   <div className="works_listItem_textblock">
-                     <h2 className={`works_title ${isH2Visible ? 'visible' : ''}`}>Spotify API / React</h2>
-                   </div>
-                 </Link>
-               </li>
-              <li className="works_listItem">
-                <Link to="https://random-dog-api.vercel.app/" target="_blank" className="">
-                  <img
-                    src={works02} 
-                    className={`works_listItem_eyecatch ${isImageVisible ? 'visible' : ''} fadein scrollin`} 
-                    alt="" 
-                  />
-                  <div className="works_listItem_textblock">
-                    <h2 className={`works_title ${isH2Visible ? 'visible' : ''}`}>Random Dog API / Vue.js</h2>
-                  </div>
-                </Link>
-              </li>
-              <li className="works_listItem">
-                <Link to="https://price-tools.vercel.app/" target="_blank" className="">
-                  <img 
-                    src={works01} 
-                    className={`works_listItem_eyecatch ${isImageVisible ? 'visible' : ''} fadein scrollin`} 
-                    alt="" 
-                  />
-                  <div className="works_listItem_textblock">
-                    <h2 className={`works_title ${isH2Visible ? 'visible' : ''}`}>Pricing Tools / React</h2>
-                  </div>
-                </Link>
-              </li>
-              <li className="works_listItem">
-                <Link to="https://duo-shadowing-app.vercel.app/" target="_blank" className="">
-                 <img 
-                   src={works06} 
-                   className={`works_listItem_eyecatch ${isImageVisible ? 'visible' : ''} fadein scrollin`} 
-                   alt="" 
-                 />
-                 <div className="works_listItem_textblock">
-                   <h2 className={`works_title ${isH2Visible ? 'visible' : ''}`}>Duo 3.0 Shadowing App / React</h2>
-                 </div>
-                 </Link>
-              </li>
-              <li className="works_listItem">
-                <Link to="https://vocabulary-practice-xi.vercel.app/" target="_blank" className="">
-                  <img
-                    src={works04} 
-                    className={`works_listItem_eyecatch ${isImageVisible ? 'visible' : ''} fadein scrollin`} 
-                    alt="" 
-                  />
-                  <div className="works_listItem_textblock">
-                    <h2 className={`works_title ${isH2Visible ? 'visible' : ''}`}>TOEIC Quiz App / React</h2>
-                  </div>
-                </Link>
-              </li>
-              <li className="works_listItem">
-                 <Link to="https://nextjs-pokeapi.vercel.app/" target="_blank" className="">
-                   <img 
-                     src={works07} 
-                     className={`works_listItem_eyecatch ${isImageVisible ? 'visible' : ''} fadein scrollin`} 
-                     alt="" 
-                   />
-                   <div className="works_listItem_textblock">
-                     <h2 className={`works_title ${isH2Visible ? 'visible' : ''}`}>PokéAPI SSR + CSR / Next.js</h2>
-                   </div>
-                 </Link>
-               </li>
-                <li className="works_listItem">
-                 <Link to="https://notion-blog-nu-dun.vercel.app/" target="_blank" className="">
-                   <img 
-                     src={works05} 
-                     className={`works_listItem_eyecatch ${isImageVisible ? 'visible' : ''} fadein scrollin`} 
-                     alt="" 
-                   />
-                   <div className="works_listItem_textblock">
-                     <h2 className={`works_title ${isH2Visible ? 'visible' : ''}`}>Notion API Blog / Next.js</h2>
-                   </div>
-                 </Link>
-               </li>
-               <li className="works_listItem">
-                  <Link to="/works" target="_blank" className="">
-                    <img 
-                      src={worksComingSoon} 
-                      className={`works_listItem_eyecatch ${isImageVisible ? 'visible' : ''} fadein scrollin`} 
-                      alt="" 
+    <div className="l-content content">
+      <div className="l-content_inner content_inner">
+        <section className="content__works">
+          <h1 className={`content__title ${isTitleVisible ? 'visible' : ''}`}>
+            WORKS
+          </h1>
+
+          <ul className="works_list">
+            {worksData.map((work) => {
+              const imgSrc = resolveImage(work.image);
+              const Wrapper = work.internal ? Link : 'a';
+              const props = work.internal
+                ? { to: work.url }
+                : { href: work.url, target: '_blank', rel: 'noopener noreferrer' };
+
+              return (
+                <li className="works_listItem" key={work.title}>
+                  <Wrapper {...props} className="">
+                    <img
+                      src={imgSrc}
+                      className={`works_listItem_eyecatch ${
+                        isImageVisible ? 'visible' : ''
+                      } fadein scrollin`}
+                      alt={work.title}
                     />
                     <div className="works_listItem_textblock">
-                      <h2 className={`works_title ${isH2Visible ? 'visible' : ''}`}>Coming Soon...</h2>
+                      <h2
+                        className={`works_title ${
+                          isH2Visible ? 'visible' : ''
+                        }`}
+                      >
+                        {work.title}
+                      </h2>
                     </div>
-                  </Link>
+                  </Wrapper>
                 </li>
-            </ul>
-          </section>
-        </div>
+              );
+            })}
+          </ul>
+        </section>
       </div>
-    </>
+    </div>
   );
 }
 

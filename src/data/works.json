@@ -1,0 +1,43 @@
+[
+  {
+    "title": "Spotify API / React",
+    "url": "https://spotify-app-ji1q.vercel.app/",
+    "image": "img03.png"
+  },
+  {
+    "title": "Random Dog API / Vue.js",
+    "url": "https://random-dog-api.vercel.app/",
+    "image": "img02.png"
+  },
+  {
+    "title": "Pricing Tools / React",
+    "url": "https://price-tools.vercel.app/",
+    "image": "img01.png"
+  },
+  {
+    "title": "Duo 3.0 Shadowing App / React",
+    "url": "https://duo-shadowing-app.vercel.app/",
+    "image": "img06.png"
+  },
+  {
+    "title": "TOEIC Quiz App / React",
+    "url": "https://vocabulary-practice-xi.vercel.app/",
+    "image": "img04.png"
+  },
+  {
+    "title": "PokéAPI SSR + CSR / Next.js",
+    "url": "https://nextjs-pokeapi.vercel.app/",
+    "image": "img07.png"
+  },
+  {
+    "title": "Notion API Blog / Next.js",
+    "url": "https://notion-blog-nu-dun.vercel.app/",
+    "image": "img05.png"
+  },
+  {
+    "title": "Coming Soon...",
+    "url": "/works",
+    "image": "coming-soon.png",
+    "internal": true
+  }
+]
