@@ -8,6 +8,7 @@ import works03 from '../assets/images/works/img03.png';
 import works04 from '../assets/images/works/img04.png';
 import works05 from '../assets/images/works/img05.png';
 import works06 from '../assets/images/works/img06.png';
+import works07 from '../assets/images/works/img07.png';
 import worksComingSoon from '../assets/images/coming-soon.png';
 
 function Works() {
@@ -66,30 +67,6 @@ function Works() {
             <h1 className={`content__title ${isTitleVisible ? 'visible' : ''}`}>WORKS</h1>
             <ul className="works_list">
               <li className="works_listItem">
-                <Link to="https://price-tools.vercel.app/" target="_blank" className="">
-                  <img 
-                    src={works01} 
-                    className={`works_listItem_eyecatch ${isImageVisible ? 'visible' : ''} fadein scrollin`} 
-                    alt="" 
-                  />
-                  <div className="works_listItem_textblock">
-                    <h2 className={`works_title ${isH2Visible ? 'visible' : ''}`}>Pricing Tools / React</h2>
-                  </div>
-                </Link>
-              </li>
-              <li className="works_listItem">
-                <Link to="https://random-dog-api.vercel.app/" target="_blank" className="">
-                  <img
-                    src={works02} 
-                    className={`works_listItem_eyecatch ${isImageVisible ? 'visible' : ''} fadein scrollin`} 
-                    alt="" 
-                  />
-                  <div className="works_listItem_textblock">
-                    <h2 className={`works_title ${isH2Visible ? 'visible' : ''}`}>Dog API / Vue.js</h2>
-                  </div>
-                </Link>
-              </li>
-              <li className="works_listItem">
                  <Link to="https://spotify-app-ji1q.vercel.app/" target="_blank" className="">
                    <img 
                      src={works03} 
@@ -101,6 +78,30 @@ function Works() {
                    </div>
                  </Link>
                </li>
+              <li className="works_listItem">
+                <Link to="https://random-dog-api.vercel.app/" target="_blank" className="">
+                  <img
+                    src={works02} 
+                    className={`works_listItem_eyecatch ${isImageVisible ? 'visible' : ''} fadein scrollin`} 
+                    alt="" 
+                  />
+                  <div className="works_listItem_textblock">
+                    <h2 className={`works_title ${isH2Visible ? 'visible' : ''}`}>Random Dog API / Vue.js</h2>
+                  </div>
+                </Link>
+              </li>
+              <li className="works_listItem">
+                <Link to="https://price-tools.vercel.app/" target="_blank" className="">
+                  <img 
+                    src={works01} 
+                    className={`works_listItem_eyecatch ${isImageVisible ? 'visible' : ''} fadein scrollin`} 
+                    alt="" 
+                  />
+                  <div className="works_listItem_textblock">
+                    <h2 className={`works_title ${isH2Visible ? 'visible' : ''}`}>Pricing Tools / React</h2>
+                  </div>
+                </Link>
+              </li>
               <li className="works_listItem">
                 <Link to="https://duo-shadowing-app.vercel.app/" target="_blank" className="">
                  <img 
@@ -125,10 +126,10 @@ function Works() {
                   </div>
                 </Link>
               </li>
-              {/* <li className="works_listItem">
+              <li className="works_listItem">
                  <Link to="https://nextjs-pokeapi.vercel.app/" target="_blank" className="">
                    <img 
-                     src={works04} 
+                     src={works07} 
                      className={`works_listItem_eyecatch ${isImageVisible ? 'visible' : ''} fadein scrollin`} 
                      alt="" 
                    />
@@ -136,7 +137,7 @@ function Works() {
                      <h2 className={`works_title ${isH2Visible ? 'visible' : ''}`}>PokéAPI SSR + CSR / Next.js</h2>
                    </div>
                  </Link>
-               </li> */}
+               </li>
                 <li className="works_listItem">
                  <Link to="https://notion-blog-nu-dun.vercel.app/" target="_blank" className="">
                    <img 
@@ -149,7 +150,7 @@ function Works() {
                    </div>
                  </Link>
                </li>
-               {/* <li className="works_listItem">
+               <li className="works_listItem">
                   <Link to="/works" target="_blank" className="">
                     <img 
                       src={worksComingSoon} 
@@ -160,7 +161,7 @@ function Works() {
                       <h2 className={`works_title ${isH2Visible ? 'visible' : ''}`}>Coming Soon...</h2>
                     </div>
                   </Link>
-                </li> */}
+                </li>
             </ul>
           </section>
         </div>
