@@ -15,6 +15,11 @@
     "image": "img01.png"
   },
   {
+    "title": "{JSON} Placeholder API / Vue.js",
+    "url": "https://json-placeholder-plum.vercel.app/",
+    "image": "img08.png"
+  },
+  {
     "title": "Duo 3.0 Shadowing App / React",
     "url": "https://duo-shadowing-app.vercel.app/",
     "image": "img06.png"
