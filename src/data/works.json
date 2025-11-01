@@ -1,8 +1,8 @@
 [
   {
-    "title": "Spotify API / React",
-    "url": "https://spotify-app-ji1q.vercel.app/",
-    "image": "img03.png"
+    "title": "Poké API / Vue.js",
+    "url": "https://pokemon-api-seven-black.vercel.app/",
+    "image": "pokemon.png"
   },
   {
     "title": "Random Dog API / Vue.js",
@@ -15,9 +15,9 @@
     "image": "img01.png"
   },
   {
-    "title": "{JSON} Placeholder API / Vue.js",
-    "url": "https://json-placeholder-plum.vercel.app/",
-    "image": "img08.png"
+    "title": "Spotify API / React",
+    "url": "https://spotify-app-ji1q.vercel.app/",
+    "image": "img03.png"
   },
   {
     "title": "Duo 3.0 Shadowing App / React",
@@ -28,11 +28,6 @@
     "title": "TOEIC Quiz App / React",
     "url": "https://vocabulary-practice-xi.vercel.app/",
     "image": "img04.png"
-  },
-  {
-    "title": "PokéAPI SSR + CSR / Next.js",
-    "url": "https://nextjs-pokeapi.vercel.app/",
-    "image": "img07.png"
   },
   {
     "title": "Notion API Blog / Next.js",
