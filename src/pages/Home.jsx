@@ -4,6 +4,7 @@ import Works from './Works';
 import Footer from '../component/Footer'; 
 import Layout from "../component/Layout"; 
 import Scroll from "../component/Scroll"; 
+import Skill from '../component/Skill';
 
 const title = "TETSUHIRO MUNEYUKI";
 const subtitle = "IT IS A WEB DEVELOPER'S PORTFOLIO.";
@@ -30,6 +31,7 @@ function Home() {
       <div style={{ position: 'relative', zIndex: 2 }}>
         <About />
         <Works />
+        <Skill />
         <Contact />
         <Footer />
       </div>

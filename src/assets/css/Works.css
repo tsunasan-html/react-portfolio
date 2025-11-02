@@ -58,6 +58,11 @@
   color: #a28d69;
   margin: 0;
 }
+@media screen and (min-width: 768px) {
+  .works_listItem:nth-last-child(-n + 2) {
+    padding-bottom: 1.6vw;
+  } 
+}
 
 @media screen and (max-width: 767px) {
   .works_list {
@@ -68,6 +73,12 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 5vw auto 7.5vw;
+  }
+  .works_list:nth-last-child(1) {
+    margin: 5vw auto 0vw;
+  }
+  .works_listItem:nth-last-child(1) {
+      padding-bottom: 4.2vw;
   }
   .wrapper--top .main_works_listItem {
     padding-bottom: 13vw;

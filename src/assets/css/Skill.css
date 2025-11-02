@@ -1,0 +1,91 @@
+/* === 追加：アニメーション用トークン（任意） === */
+:root {
+  --fade-distance: 20px;
+  --fade-duration: 1s;
+  --fade-ease: ease;
+}
+
+/* ====== グリッド（そのまま） ====== */
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3vw;
+  justify-items: center;
+}
+
+/* ====== 各アイコン（見た目はそのまま）＋ 初期状態の追加 ====== */
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8vw;
+  /* color: #7d7d76; */
+  color: #1a1a1a;
+  font-size: 4vw;
+
+  /* 既存のhover用に加えて、フェードアップ用transitionを統一 */
+  transition:
+    opacity var(--fade-duration) var(--fade-ease),
+    transform var(--fade-duration) var(--fade-ease),
+    color .25s ease;
+  cursor: pointer;
+
+  /* ← 初期は非表示＆下にずらす（追加） */
+  opacity: 0;
+  transform: translateY(var(--fade-distance));
+
+  /* スタッガー用（JSから --stagger を上書き） */
+  transition-delay: var(--stagger, 0ms);
+}
+
+/* 可視化後：ふわっと表示（追加） */
+.icon-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.icon-item:last-child {
+  margin-bottom: 1.4vw;
+}
+
+/* ====== hover（そのまま） ====== */
+.icon-item:hover {
+  transform: translateY(-4px) scale(1.08);
+  /* color: #1a1a1a;  */
+  color: #a28d69;
+}
+
+/* ====== ラベル（そのまま） ====== */
+.icon-label {
+  font-size: 1vw;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #444;
+  transition: color 0.25s ease;
+}
+
+/* ====== SP（そのまま） ====== */
+@media screen and (max-width: 767px) {
+  .icon-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7vw; 
+  }
+  .icon-item {
+    font-size: 11vw; 
+  }
+  .icon-label {
+    font-size: 3.2vw;
+  }
+  .icon-item:last-child {
+    margin-bottom: 4vw;
+  }
+}
+
+/* 動きを減らす設定の尊重（追加推奨） */
+@media (prefers-reduced-motion: reduce) {
+  .icon-item {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}
