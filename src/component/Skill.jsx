@@ -1,18 +1,35 @@
 import React, { useEffect, useRef } from "react";
 import "../assets/css/Skill.css";
-import { FaHtml5, FaCss3Alt, FaReact, FaVuejs, FaGithub, FaPhp, FaAws } from "react-icons/fa";
-import { SiJavascript, SiGoogleappsscript } from "react-icons/si";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaVuejs,
+  FaGithub,
+  FaPhp,
+  FaAws,
+} from "react-icons/fa";
+import {
+  SiJavascript,
+  SiGoogleappsscript,
+  SiSass,
+  SiAdobeillustrator,
+  SiAdobephotoshop,
+  SiAdobexd
+} from "react-icons/si";
 
 const ICONS = [
   { icon: <FaHtml5 />, label: "HTML" },
-  { icon: <FaCss3Alt />, label: "CSS / SCSS" },
+  { icon: <FaCss3Alt />, label: "CSS" },
+  { icon: <SiSass />, label: "SCSS" },
   { icon: <SiJavascript />, label: "JavaScript" },
   { icon: <FaVuejs />, label: "Vue.js" },
   { icon: <FaReact />, label: "React" },
+  { icon: <SiGoogleappsscript />, label: "GAS" },
   { icon: <FaPhp />, label: "PHP" },
   { icon: <FaAws />, label: "AWS" },
-  { icon: <SiGoogleappsscript />, label: "GAS" },
   { icon: <FaGithub />, label: "GitHub" },
+  { icon: <SiAdobexd />, label: "XD" },
 ];
 
 export default function Skill() {
@@ -22,35 +39,47 @@ export default function Skill() {
     const root = sectionRef.current;
     if (!root) return;
 
-    const observerConfig = { threshold: 0.45 };
+    const observerConfig = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -20% 0px",
+    };
 
-    // タイトル
+    // Title observer
     const title = root.querySelector(".content__title");
-    const titleObserver = new IntersectionObserver(([e]) => {
-      if (e.isIntersecting) title.classList.add("visible");
+    const titleObserver = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        titleObserver.unobserve(entry.target);
+      }
     }, observerConfig);
     if (title) titleObserver.observe(title);
 
-    // アイコン（各要素に可視クラス）＋ スタッガー遅延
-    const iconEls = Array.from(root.querySelectorAll(".icon-item"));
-    const iconObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          iconObserver.unobserve(entry.target);
-        }
-      });
+    // Grid observer (child icons show as a batch)
+    const grid = root.querySelector(".icon-grid");
+    const gridObserver = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        grid.classList.add("is-visible");
+        gridObserver.unobserve(grid);
+      }
     }, observerConfig);
+    if (grid) gridObserver.observe(grid);
 
+    // Stagger delay per icon
+    const iconEls = Array.from(root.querySelectorAll(".icon-item"));
     iconEls.forEach((el, i) => {
-      // ほんのりディレイ（60ms刻み）
       el.style.setProperty("--stagger", `${i * 60}ms`);
-      iconObserver.observe(el);
     });
 
+    // Fallback (in case IO doesn't fire)
+    const fallback = setTimeout(() => {
+      grid?.classList.add("is-visible");
+      title?.classList.add("visible");
+    }, 1500);
+
     return () => {
+      clearTimeout(fallback);
       if (title) titleObserver.unobserve(title);
-      iconEls.forEach((el) => iconObserver.unobserve(el));
+      if (grid) gridObserver.unobserve(grid);
     };
   }, []);
 
@@ -61,7 +90,13 @@ export default function Skill() {
 
         <div className="icon-grid">
           {ICONS.map((s, i) => (
-            <div key={i} className="icon-item" title={s.label}>
+            <div
+              key={i}
+              className="icon-item"
+              title={s.label}
+              aria-label={s.label}
+              role="img"
+            >
               {s.icon}
               <span className="icon-label">{s.label}</span>
             </div>
