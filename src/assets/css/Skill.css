@@ -68,13 +68,14 @@
 @media screen and (max-width: 767px) {
   .icon-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 7vw; 
+    gap: 7.5vw; 
   }
   .icon-item {
     font-size: 11vw; 
   }
   .icon-label {
     font-size: 2.9vw;
+    letter-spacing: 0.08em;
   }
   .icon-item:last-child {
     margin-bottom: 4vw;
