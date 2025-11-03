@@ -15,6 +15,7 @@ import {
   SiSass,
   SiAdobeillustrator,
   SiAdobephotoshop,
+  SiAdobepremierepro,
   SiAdobexd
 } from "react-icons/si";
 
@@ -30,6 +31,9 @@ const ICONS = [
   { icon: <FaAws />, label: "AWS" },
   { icon: <FaGithub />, label: "GitHub" },
   { icon: <SiAdobexd />, label: "XD" },
+  { icon: <SiAdobeillustrator />, label: "Illustrator" },
+  { icon: <SiAdobephotoshop />, label: "Photoshop" },
+  { icon: <SiAdobepremierepro />, label: "Premiere Pro" },
 ];
 
 export default function Skill() {
