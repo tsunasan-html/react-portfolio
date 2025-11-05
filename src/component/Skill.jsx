@@ -43,6 +43,7 @@ export default function Skill() {
     const root = sectionRef.current;
     if (!root) return;
 
+    // ★ ヘッダー分を上から差し引き、判定をゆるめる
     const observerConfig = {
       threshold: 0.2,
       rootMargin: "0px 0px -20% 0px",
@@ -52,36 +53,44 @@ export default function Skill() {
     const title = root.querySelector(".content__title");
     const titleObserver = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        titleObserver.unobserve(entry.target);
+        // rAFで1フレーム遅らせ、初期スタイル適用後にトランジション開始
+        requestAnimationFrame(() => {
+          entry.target.classList.add("visible");
+          titleObserver.unobserve(entry.target);
+        });
       }
     }, observerConfig);
     if (title) titleObserver.observe(title);
 
-    // Grid observer (child icons show as a batch)
+    // Grid observer（子アイコンはまとめて可視化）
     const grid = root.querySelector(".icon-grid");
     const gridObserver = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
-        grid.classList.add("is-visible");
-        gridObserver.unobserve(grid);
+        requestAnimationFrame(() => {
+          grid.classList.add("is-visible");
+          gridObserver.unobserve(grid);
+        });
       }
     }, observerConfig);
     if (grid) gridObserver.observe(grid);
 
-    // Stagger delay per icon
+    // スタッガー設定
     const iconEls = Array.from(root.querySelectorAll(".icon-item"));
     iconEls.forEach((el, i) => {
       el.style.setProperty("--stagger", `${i * 60}ms`);
     });
 
-    // Fallback (in case IO doesn't fire)
-    const fallback = setTimeout(() => {
-      grid?.classList.add("is-visible");
-      title?.classList.add("visible");
-    }, 1500);
+    // ★ フォールバックは IO 非対応環境だけ（早期発火を防ぐ）
+    let fallback;
+    if (!("IntersectionObserver" in window)) {
+      fallback = setTimeout(() => {
+        grid?.classList.add("is-visible");
+        title?.classList.add("visible");
+      }, 1500);
+    }
 
     return () => {
-      clearTimeout(fallback);
+      if (fallback) clearTimeout(fallback);
       if (title) titleObserver.unobserve(title);
       if (grid) gridObserver.unobserve(grid);
     };
