@@ -20,16 +20,6 @@
     "image": "img03.png"
   },
   {
-    "title": "Duo 3.0 Shadowing App / React",
-    "url": "https://duo-shadowing-app.vercel.app/",
-    "image": "img06.png"
-  },
-  {
-    "title": "TOEIC Quiz App / React",
-    "url": "https://vocabulary-practice-xi.vercel.app/",
-    "image": "img04.png"
-  },
-  {
     "title": "Notion API Blog / Next.js",
     "url": "https://notion-blog-nu-dun.vercel.app/",
     "image": "img05.png"
