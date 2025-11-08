@@ -5,7 +5,7 @@
     "image": "pokemon.png"
   },
   {
-    "title": "Random Dog API / Vue.js",
+    "title": "Dog API / Vue.js + Local Storage",
     "url": "https://random-dog-one.vercel.app/",
     "image": "dog.png"
   },
