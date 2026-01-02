@@ -18,6 +18,8 @@ import {
   SiAdobepremierepro,
   SiAdobexd
 } from "react-icons/si";
+import { AiOutlineAntDesign } from "react-icons/ai";
+import { FiFigma } from "react-icons/fi";
 
 const ICONS = [
   { icon: <FaHtml5 />, label: "HTML" },
@@ -30,6 +32,8 @@ const ICONS = [
   { icon: <FaPhp />, label: "PHP" },
   { icon: <FaAws />, label: "AWS" },
   { icon: <FaGithub />, label: "GitHub" },
+    { icon: <AiOutlineAntDesign />, label: "Ant Design" },
+  { icon: <FiFigma />, label: "Figma" },
   { icon: <SiAdobexd />, label: "XD" },
   { icon: <SiAdobeillustrator />, label: "Illustrator" },
   { icon: <SiAdobephotoshop />, label: "Photoshop" },
