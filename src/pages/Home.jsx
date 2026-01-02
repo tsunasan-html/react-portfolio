@@ -1,10 +1,10 @@
 import About from './About';
 import Contact from './Contact';
 import Works from './Works';
-import Footer from '../component/Footer'; 
-import Layout from "../component/Layout"; 
-import Scroll from "../component/Scroll"; 
-import Skill from '../component/Skill';
+import Footer from '../components/Footer'; 
+import Layout from "../components/Layout"; 
+import Scroll from "../components/Scroll"; 
+import Skill from '../components/Skill';
 
 const title = "TETSUHIRO MUNEYUKI";
 const subtitle = "IT IS A WEB DEVELOPER'S PORTFOLIO.";
