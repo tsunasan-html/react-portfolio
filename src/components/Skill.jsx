@@ -32,7 +32,7 @@ const ICONS = [
   { icon: <FaPhp />, label: "PHP" },
   { icon: <FaAws />, label: "AWS" },
   { icon: <FaGithub />, label: "GitHub" },
-    { icon: <AiOutlineAntDesign />, label: "Ant Design" },
+  { icon: <AiOutlineAntDesign />, label: "Ant Design" },
   { icon: <FiFigma />, label: "Figma" },
   { icon: <SiAdobexd />, label: "XD" },
   { icon: <SiAdobeillustrator />, label: "Illustrator" },
