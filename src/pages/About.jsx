@@ -44,6 +44,10 @@ function About() {
               <br /><br />
               学習ログや制作したPortfolioの詳細は、WantedlyやBlogで発信しています。<br className="line-break" />
               よろしければご覧いただけますと幸いです。
+              <br /><br />
+              また、英語学習にも継続的に取り組んでおり、<br />
+              グローバルな開発環境にも対応できるエンジニアを目指しています。<br />
+              2026年にはTOEIC800点の達成を目標としています。
             </p>
           </section>
         </div>
