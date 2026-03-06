@@ -11,14 +11,14 @@ const Footer = () => {
       <div className="footer_inner">
         <div className="footer-icons">
         {/* Facebook */}
-        <a
+        {/* <a
           href="https://www.facebook.com/profile.php?id=61576673130333"
           aria-label="Facebook"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FontAwesomeIcon icon={faFacebookF} className="footer-icon" />
-        </a>
+        </a> */}
 
         {/* Wantedly */}
         <a
