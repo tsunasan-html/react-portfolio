@@ -13,13 +13,9 @@ import {
   SiJavascript,
   SiGoogleappsscript,
   SiSass,
-  SiAdobeillustrator,
-  SiAdobephotoshop,
-  SiAdobepremierepro,
-  SiAdobexd
+  SiAdobexd,
+  SiPostgresql,
 } from "react-icons/si";
-import { AiOutlineAntDesign } from "react-icons/ai";
-import { FiFigma } from "react-icons/fi";
 
 const ICONS = [
   { icon: <FaHtml5 />, label: "HTML" },
@@ -30,14 +26,10 @@ const ICONS = [
   { icon: <FaReact />, label: "React" },
   { icon: <SiGoogleappsscript />, label: "GAS" },
   { icon: <FaPhp />, label: "PHP" },
-  // { icon: <FaAws />, label: "AWS" },
+  { icon: <SiPostgresql />, label: "SQL" },
+  { icon: <FaAws />, label: "AWS" },
   { icon: <FaGithub />, label: "GitHub" },
-  // { icon: <AiOutlineAntDesign />, label: "Ant Design" },
-  // { icon: <FiFigma />, label: "Figma" },
   { icon: <SiAdobexd />, label: "XD" },
-  { icon: <SiAdobeillustrator />, label: "Illustrator" },
-  { icon: <SiAdobephotoshop />, label: "Photoshop" },
-  { icon: <SiAdobepremierepro />, label: "Premiere Pro" },
 ];
 
 export default function Skill() {
@@ -47,17 +39,14 @@ export default function Skill() {
     const root = sectionRef.current;
     if (!root) return;
 
-    // ★ ヘッダー分を上から差し引き、判定をゆるめる
     const observerConfig = {
       threshold: 0.2,
       rootMargin: "0px 0px -20% 0px",
     };
 
-    // Title observer
     const title = root.querySelector(".content__title");
     const titleObserver = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
-        // rAFで1フレーム遅らせ、初期スタイル適用後にトランジション開始
         requestAnimationFrame(() => {
           entry.target.classList.add("visible");
           titleObserver.unobserve(entry.target);
@@ -66,7 +55,6 @@ export default function Skill() {
     }, observerConfig);
     if (title) titleObserver.observe(title);
 
-    // Grid observer（子アイコンはまとめて可視化）
     const grid = root.querySelector(".icon-grid");
     const gridObserver = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
@@ -78,13 +66,11 @@ export default function Skill() {
     }, observerConfig);
     if (grid) gridObserver.observe(grid);
 
-    // スタッガー設定
     const iconEls = Array.from(root.querySelectorAll(".icon-item"));
     iconEls.forEach((el, i) => {
       el.style.setProperty("--stagger", `${i * 60}ms`);
     });
 
-    // ★ フォールバックは IO 非対応環境だけ（早期発火を防ぐ）
     let fallback;
     if (!("IntersectionObserver" in window)) {
       fallback = setTimeout(() => {
