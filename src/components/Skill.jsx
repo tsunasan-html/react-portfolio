@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from "react";
+import { AiOutlineAntDesign } from "react-icons/ai";
+import { FaJava } from "react-icons/fa"; // Spring Boot代用
 import "../assets/css/Skill.css";
 import {
   FaHtml5,
@@ -21,12 +23,14 @@ const ICONS = [
   { icon: <FaHtml5 />, label: "HTML" },
   { icon: <FaCss3Alt />, label: "CSS" },
   { icon: <SiSass />, label: "SCSS" },
+  { icon: <AiOutlineAntDesign />, label: "Ant Design" },
   { icon: <SiJavascript />, label: "JavaScript" },
   { icon: <FaVuejs />, label: "Vue.js" },
   { icon: <FaReact />, label: "React" },
   { icon: <SiGoogleappsscript />, label: "GAS" },
   { icon: <FaPhp />, label: "PHP" },
   { icon: <SiPostgresql />, label: "SQL" },
+  { icon: <FaJava />, label: "Spring Boot" },
   { icon: <FaAws />, label: "AWS" },
   { icon: <FaGithub />, label: "GitHub" },
   { icon: <SiAdobexd />, label: "XD" },
