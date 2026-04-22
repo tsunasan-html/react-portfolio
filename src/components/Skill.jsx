@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { AiOutlineAntDesign } from "react-icons/ai";
-import { FaJava } from "react-icons/fa"; // Spring Boot代用
+
 import "../assets/css/Skill.css";
 import {
   FaHtml5,
@@ -17,6 +17,9 @@ import {
   SiSass,
   SiAdobexd,
   SiPostgresql,
+  SiAdobeillustrator,
+  SiAdobephotoshop,
+  SiAdobepremierepro,
 } from "react-icons/si";
 
 const ICONS = [
@@ -30,10 +33,12 @@ const ICONS = [
   { icon: <SiGoogleappsscript />, label: "GAS" },
   { icon: <FaPhp />, label: "PHP" },
   { icon: <SiPostgresql />, label: "SQL" },
-  { icon: <FaJava />, label: "Spring Boot" },
   { icon: <FaAws />, label: "AWS" },
   { icon: <FaGithub />, label: "GitHub" },
   { icon: <SiAdobexd />, label: "XD" },
+  { icon: <SiAdobeillustrator />, label: "Illustrator" },
+  { icon: <SiAdobephotoshop />, label: "Photoshop" },
+  { icon: <SiAdobepremierepro />, label: "Premiere Pro" },
 ];
 
 export default function Skill() {
