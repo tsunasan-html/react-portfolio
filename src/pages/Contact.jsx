@@ -96,7 +96,7 @@ function Contact() {
               </p>
 
               <p className="contact_form_block">
-                <label htmlFor="contact_mail">MAIL ADRESS</label>
+                <label htmlFor="contact_mail">MAIL ADDRESS</label>
                 <input
                   id="contact_mail"
                   className="contact_form_input contact_form_input--mail"
