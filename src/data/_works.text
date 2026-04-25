@@ -18,5 +18,11 @@
     "title": "TOEIC Quiz App / React",
     "url": "https://vocabulary-practice-xi.vercel.app/",
     "image": "img04.png"
+  },
+  {
+    "title": "Coming Soon...",
+    "url": "/works",
+    "image": "coming-soon.png",
+    "internal": true
   }
 ]

@@ -25,9 +25,8 @@
     "image": "img05.png"
   },
   {
-    "title": "Coming Soon...",
-    "url": "/works",
-    "image": "coming-soon.png",
-    "internal": true
+    "title": "Contact Form / Next.js + Supabase",
+    "url": "https://contact-form-app-beryl.vercel.app/contact",
+    "image": "img09.png"
   }
 ]
