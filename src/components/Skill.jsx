@@ -35,10 +35,10 @@ const ICONS = [
   { icon: <SiPostgresql />, label: "SQL" },
   { icon: <FaAws />, label: "AWS" },
   { icon: <FaGithub />, label: "GitHub" },
-  { icon: <SiAdobexd />, label: "XD" },
-  { icon: <SiAdobeillustrator />, label: "Illustrator" },
-  { icon: <SiAdobephotoshop />, label: "Photoshop" },
-  { icon: <SiAdobepremierepro />, label: "Premiere Pro" },
+  // { icon: <SiAdobexd />, label: "XD" },
+  // { icon: <SiAdobeillustrator />, label: "Illustrator" },
+  // { icon: <SiAdobephotoshop />, label: "Photoshop" },
+  // { icon: <SiAdobepremierepro />, label: "Premiere Pro" },
 ];
 
 export default function Skill() {
