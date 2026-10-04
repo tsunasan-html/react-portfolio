@@ -24,13 +24,12 @@ import {
 } from "react-icons/si";
 
 const ICONS = [
-  // { icon: <FaHtml5 />, label: "HTML" },
-  // { icon: <FaCss3Alt />, label: "CSS" },
+  { icon: <FaHtml5 />, label: "HTML" },
+  { icon: <FaCss3Alt />, label: "CSS" },
   { icon: <SiSass />, label: "SCSS" },
-  // { icon: <AiOutlineAntDesign />, label: "Ant Design" },
   { icon: <SiJavascript />, label: "JavaScript" },
   { icon: <FaVuejs />, label: "Vue.js" },
-  { icon: <FaReact />, label: "React" },
+  // { icon: <FaReact />, label: "React" },
   { icon: <SiGoogleappsscript />, label: "GAS" },
   { icon: <SiSpringboot />, label: "Spring Boot" },
   { icon: <FaPhp />, label: "PHP" },

@@ -33,15 +33,14 @@ function About() {
               <span className={`about__name-position animate-on-scroll ${isVisible ? 'visible' : ''}`}>WEB DEVELOPER</span>
             </h2>
             <p className={`about__sentence animate-on-scroll ${isVisible ? 'visible' : ''}`}>
-              2025年6月よりチケット駆動開発のもと、<br />
+              2025年6月よりチケット駆動開発のもと、<br className="line-break" />
               Webエンジニアとしてアプリケーションの開発に携わっています。
               <br /><br />
-              これまでに2社の事業会社で、<br />
+              これまでに2社の事業会社で、<br className="line-break" />
               WebコーダーとしてDOM操作やUI実装を中心に経験してきました。
               <br /><br />
-              現職では、1年目はVue.jsを用いたフロントエンド開発・保守運用、テスト設計・進行管理、<br />
-              SQLを用いたデータ更新・調査を担当し、<br />
-              2年目からは、Spring Bootを用いた業務システムの開発に従事しています。
+              現職では、1年目にVue.jsを用いたフロントエンド開発やSQLを用いたデータ運用を経験し、<br className="line-break" />
+              2年目の現在はSpring Bootを用いた業務システム開発に携わっています。
               <br /><br />
               学習ログや制作したPortfolioの詳細は、WantedlyやBlogで発信しています。<br className="line-break" />
               よろしければご覧いただけますと幸いです。
